@@ -41,7 +41,7 @@ export default function App() {
   }, [setFrameReady, isFrameReady]);
 
   useEffect(() => {
-    sdk.actions.ready();
+    window.farcasterMiniAppSdk?.actions.ready();
   }, []);
 
   const handleAddFrame = useCallback(async () => {

@@ -44,6 +44,10 @@ export default function RootLayout({
     <html lang="en">
       <body className="bg-background">
         <Providers>{children}</Providers>
+        <script type="module">
+          import { sdk } from 'https://esm.sh/@farcaster/miniapp-sdk'
+          window.farcasterMiniAppSdk = sdk;
+        </script>
       </body>
     </html>
   );

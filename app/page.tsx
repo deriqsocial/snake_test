@@ -24,6 +24,7 @@ import { Icon } from "./components/DemoComponents";
 import { Home } from "./components/DemoComponents";
 import { Features } from "./components/DemoComponents";
 import SnakeGame from "./components/SnakeGame";
+import { sdk } from '@farcaster/miniapp-sdk';
 
 export default function App() {
   const { setFrameReady, isFrameReady, context } = useMiniKit();
@@ -38,6 +39,10 @@ export default function App() {
       setFrameReady();
     }
   }, [setFrameReady, isFrameReady]);
+
+  useEffect(() => {
+    sdk.actions.ready();
+  }, []);
 
   const handleAddFrame = useCallback(async () => {
     const frameAdded = await addFrame();

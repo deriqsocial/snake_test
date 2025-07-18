@@ -60,7 +60,7 @@ REDIS_TOKEN=
 
 3. Start the development server:
 ```bash
-npm run dev
+
 ```
 
 ## Template Features
